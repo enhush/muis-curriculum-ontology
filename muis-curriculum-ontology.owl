@@ -1,0 +1,596 @@
+@prefix : <http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum> .
+
+<http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#авах
+:авах rdf:type owl:ObjectProperty ;
+      owl:inverseOf :олгох ;
+      rdfs:domain :Суралцагч ;
+      rdfs:range :Захиргаа .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#багц_цагтай
+:багц_цагтай rdf:type owl:ObjectProperty ;
+             rdfs:domain :Хөтөлбөр ;
+             rdfs:range :Багц_цаг .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#жагсаалттай
+:жагсаалттай rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Сургалтын_төлөвлөгөө ;
+             rdfs:range :Хичээл .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#заах
+:заах rdf:type owl:ObjectProperty ;
+      rdfs:domain :Багш ;
+      rdfs:range :Хичээл .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#зохион_байгуулах
+:зохион_байгуулах rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Сургалтын_алба ;
+                  rdfs:range :Шалгалт .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#олгох
+:олгох rdf:type owl:ObjectProperty ;
+       rdfs:domain :Захиргаа ;
+       rdfs:range :Боловсролын_зэрэг .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#судалгааны_ажилтай
+:судалгааны_ажилтай rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Боловсролын_зэрэг ;
+                    rdfs:range :Судалгааны_ажил .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#суралцах
+:суралцах rdf:type owl:ObjectProperty ;
+          rdfs:domain :Суралцагч ;
+          rdfs:range :Сургалт .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#тэй
+:тэй rdf:type owl:ObjectProperty ;
+     rdfs:domain :Хөтөлбөр ;
+     rdfs:range :Сургалтын_төлөвлөгөө .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#төлөвлөгөөтэй
+:төлөвлөгөөтэй rdf:type owl:ObjectProperty ;
+               rdfs:domain :Хичээлийн_хөтөлбөр ;
+               rdfs:range :Сургалтын_төлөвлөгөө .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#удирдах
+:удирдах rdf:type owl:ObjectProperty ,
+                  owl:AsymmetricProperty ;
+         rdfs:domain :Сургалтын_нэгдсэн_алба ;
+         rdfs:range :Сургалтын_алба .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#уялдаатай
+:уялдаатай rdf:type owl:ObjectProperty ;
+           rdfs:domain :Хичээл ;
+           rdfs:range :Хичээлийн_уялдаа .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#хамрагдах
+:хамрагдах rdf:type owl:ObjectProperty ;
+           owl:inverseOf :явуулах ;
+           rdfs:domain :Суралцагч ;
+           rdfs:range :Сургалт .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#хэлбэртэй
+:хэлбэртэй rdf:type owl:ObjectProperty ;
+           rdfs:domain :Хичээл ;
+           rdfs:range :Хичээл_явагдах_хэлбэр .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#хөтөлбөртэй
+:хөтөлбөртэй rdf:type owl:ObjectProperty ;
+             rdfs:domain :Сургалт ;
+             rdfs:range :Хөтөлбөр .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#явуулах
+:явуулах rdf:type owl:ObjectProperty ;
+         rdfs:domain :Сургалтын_алба ;
+         rdfs:range :Сургалт .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#үнэлгээтэй
+:үнэлгээтэй rdf:type owl:ObjectProperty ;
+            rdfs:domain :Хичээлийн_хөтөлбөр ,
+                        :Шалгалт ;
+            rdfs:range :Үнэлгээ .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#үнэлэх
+:үнэлэх rdf:type owl:ObjectProperty ;
+        rdfs:domain :Багш ;
+        rdfs:range :Суралцагч .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#албан_тушаал
+:албан_тушаал rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Багш ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#багшийн_дугаар
+:багшийн_дугаар rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Багш ;
+                rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#нэр
+:нэр rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Судалгааны_ажил ,
+                 :Хичээл ,
+                 :Хичээлийн_хөтөлбөр ,
+                 :Хүн ;
+     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#овог
+:овог rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Хүн ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#суралцагчийн_дугаар
+:суралцагчийн_дугаар rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Суралцагч ;
+                     rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#түвшин
+:түвшин rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Суралцагч ;
+        rdfs:range xsd:unsignedInt ;
+        rdfs:comment "Суралцаж буй түвшинг илтгэнэ."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#хичээлийн_индекс
+:хичээлийн_индекс rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Хичээл ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Хичээл тус бүр тусгай ялгах дугаартай байна. 4 үсэг 3 тооноос бүтнэ."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#хичээлийн_цаг
+:хичээлийн_цаг rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Хичээл ;
+               rdfs:range xsd:unsignedInt ;
+               rdfs:comment "50 минут эсвэл 90 минутын хугацаатай байна."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#цахим_хаяг
+:цахим_хаяг rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Хүн ;
+            rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#өрөөний_дугаар
+:өрөөний_дугаар rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Багш ;
+                rdfs:range xsd:unsignedInt .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Багц_цаг
+:Багц_цаг rdf:type owl:Class ;
+          rdfs:comment "Бакалаврын хувьд 120 цаг, магистрын хувьд 30, докторын хувьд 10-аас дээш байна."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Багш
+:Багш rdf:type owl:Class ;
+      rdfs:subClassOf :Хүн ;
+      rdfs:comment "Сургалтын төлөвлөгөөд заагдсан хичээлийг удирдаж явуулах хувь хүн."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Бакалаврын_ажил
+:Бакалаврын_ажил rdf:type owl:Class ;
+                 rdfs:subClassOf :Судалгааны_ажил .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Бакалаврын_зэрэг
+:Бакалаврын_зэрэг rdf:type owl:Class ;
+                  owl:equivalentClass :Дипломын_зэрэг ;
+                  rdfs:subClassOf :Боловсролын_зэрэг ;
+                  rdfs:comment "Дээд боловсролын анхан шатны зэрэг."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Бакалаврын_сургалт
+:Бакалаврын_сургалт rdf:type owl:Class ;
+                    rdfs:subClassOf :Сургалт .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Боловсролын_зэрэг
+:Боловсролын_зэрэг rdf:type owl:Class ;
+                   rdfs:comment "Багц цагаар хэмжигдэх дипломын, бакалаврын, магистрын, докторын гэсэн шатлалтай байна."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Дипломын_зэрэг
+:Дипломын_зэрэг rdf:type owl:Class ;
+                rdfs:subClassOf :Боловсролын_зэрэг ;
+                rdfs:comment "Дээд боловсролын анхан шатны зэрэг."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Докторант
+:Докторант rdf:type owl:Class ;
+           rdfs:subClassOf :Суралцагч ;
+           rdfs:comment "Докторын зэрэг авахаар суралцаж байгаа суралцагч."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Докторын_ажил
+:Докторын_ажил rdf:type owl:Class ;
+               rdfs:subClassOf :Судалгааны_ажил .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Докторын_зэрэг
+:Докторын_зэрэг rdf:type owl:Class ;
+                rdfs:subClassOf :Боловсролын_зэрэг ;
+                rdfs:comment "Дээд боловсролын магистрын дараах зэрэг."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Докторын_сургалт
+:Докторын_сургалт rdf:type owl:Class ;
+                  rdfs:subClassOf :Сургалт .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Ерөнхий_суурь_хичээл
+:Ерөнхий_суурь_хичээл rdf:type owl:Class ;
+                      rdfs:subClassOf :Суурь_хичээл ;
+                      rdfs:comment "Дээд боловсролын суурь судлагдахуун."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Заавал_судлах
+:Заавал_судлах rdf:type owl:Class ;
+               rdfs:subClassOf :Хичээлийн_төрөл ;
+               rdfs:comment "Тухайн хөтөлбөрийн хувьд зайлшгүй судлах шаардлагатай хичээл."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Залгамж_хичээл
+:Залгамж_хичээл rdf:type owl:Class ;
+                rdfs:subClassOf :Хичээлийн_уялдаа ;
+                rdfs:comment "Тодорхой хичээлийг судлахаас өмнө судлах хичээл."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Захиргаа
+:Захиргаа rdf:type owl:Class ;
+          rdfs:subClassOf :МУИС .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Зэрэгцүүлэн_судлах_хичээл
+:Зэрэгцүүлэн_судлах_хичээл rdf:type owl:Class ;
+                           rdfs:subClassOf :Хичээлийн_уялдаа ;
+                           rdfs:comment "Тухайн хичээлтэй зэрэгцүүлэн судлаж болох хичээл."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Лаборатор
+:Лаборатор rdf:type owl:Class ;
+           rdfs:subClassOf :Хичээл_явагдах_хэлбэр ;
+           rdfs:comment "Бодитоор турших, бие даах, ур чадвар эзэмших хичээл."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Лекц
+:Лекц rdf:type owl:Class ;
+      rdfs:subClassOf :Хичээл_явагдах_хэлбэр ;
+      rdfs:comment "Тайлбарлан ярих байдлаар мэдлэг өгөх хичээл."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#МУИС
+:МУИС rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Магистрант
+:Магистрант rdf:type owl:Class ;
+            rdfs:subClassOf :Суралцагч ;
+            rdfs:comment "Магистрын зэрэг авахаар суралцаж байгаа суралцагч."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Магистрын_ажил
+:Магистрын_ажил rdf:type owl:Class ;
+                rdfs:subClassOf :Судалгааны_ажил .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Магистрын_зэрэг
+:Магистрын_зэрэг rdf:type owl:Class ;
+                 rdfs:subClassOf :Боловсролын_зэрэг ;
+                 rdfs:comment "Дээд боловсролын бакалаврын дараах зэрэг."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Магистрын_сургалт
+:Магистрын_сургалт rdf:type owl:Class ;
+                   rdfs:subClassOf :Сургалт .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Мэргэжлийн_суурь_хичээл
+:Мэргэжлийн_суурь_хичээл rdf:type owl:Class ;
+                         rdfs:subClassOf :Суурь_хичээл ;
+                         rdfs:comment "Суралцагчийн суралцах үндсэн чиглэлийнх нь дагуу суурь мэдлэг олгоход чиглэгдсэн судлагдахуун."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Мэргэжлийн_хичээл
+:Мэргэжлийн_хичээл rdf:type owl:Class ;
+                   rdfs:subClassOf :Хичээл ;
+                   rdfs:comment "Тодорхой мэргэжлийн мэдлэг ур чадвар өгөхөд чиглэсэн заавал болон сонгон судлах хичээл."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Нэгдсэн_шалгалт
+:Нэгдсэн_шалгалт rdf:type owl:Class ;
+                 rdfs:subClassOf :Шалгалт ;
+                 rdfs:comment "Хөтөлбөрийг бүрэн дууссаны дараа авах шалгалт."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Оюутан
+:Оюутан rdf:type owl:Class ;
+        rdfs:subClassOf :Суралцагч ;
+        rdfs:comment "Дипломын ба бакалаврын зэрэг авахаар суралцаж байгаа суралцагч."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Салбар_сургууль
+:Салбар_сургууль rdf:type owl:Class ;
+                 rdfs:subClassOf :МУИС .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Семинар
+:Семинар rdf:type owl:Class ;
+         rdfs:subClassOf :Хичээл_явагдах_хэлбэр ;
+         rdfs:comment "Онолыг гүнзгийрүүлэн судлах, дүгнэх, эргэцүүлэл хийх, өөрийн үзэл бодлыг үндэслэлтэй хамгаалах, илэрхийлэх дадал бүрэлдүүлэхэд чиглэсэн сургалт."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Сонгон_судлах
+:Сонгон_судлах rdf:type owl:Class ;
+               rdfs:subClassOf :Хичээлийн_төрөл ;
+               rdfs:comment "Тухайн хөтөлбөрийн сургалтын төлөвлөгөөний бүлэг бүрээр авбал зохих багц цагийг судлах зорилгоор тодорхой бүлэг хичээлүүдээс суралцагч өөрөө сонгон судлах хичээл."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Судалгааны_ажил
+:Судалгааны_ажил rdf:type owl:Class ;
+                 rdfs:comment "Суралцагчийн мэдлэг чадварыг нэгдсэн байдлаар илтгэх зорилгоор хийх эрдэм шинжилгээний ажил."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Суралцагч
+:Суралцагч rdf:type owl:Class ;
+           rdfs:subClassOf :Хүн ;
+           rdfs:comment "Оюутан, магистрант, докторантыг нийтэд нь суралцагч гэнэ."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Сургалт
+:Сургалт rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Сургалтын_алба
+:Сургалтын_алба rdf:type owl:Class ;
+                rdfs:subClassOf :Салбар_сургууль ;
+                rdfs:comment "Бүрэлдэхүүн болон харьяа сургуулийн сургалтын алба."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Сургалтын_нэгдсэн_алба
+:Сургалтын_нэгдсэн_алба rdf:type owl:Class ;
+                        rdfs:subClassOf :Захиргаа .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Сургалтын_төлөвлөгөө
+:Сургалтын_төлөвлөгөө rdf:type owl:Class ;
+                      rdfs:comment "Хөтөлбөрийн нэг хэсэг бөгөөд судлах хичээлийн талаар тусгасан баримт бичиг."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Суурь_хичээл
+:Суурь_хичээл rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Ерөнхий_суурь_хичээл
+                                                  :Мэргэжлийн_суурь_хичээл
+                                                )
+                                  ] ;
+              rdfs:subClassOf :Хичээл .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Тоон_дүн
+:Тоон_дүн rdf:type owl:Class ;
+          rdfs:subClassOf :Үнэлгээ ;
+          rdfs:comment "Үсгэн дүнд харгалзах тоон дүн. (4.0, 3.6, 3.1,..., гэх мэт)"@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Улирлын_шалгалт
+:Улирлын_шалгалт rdf:type owl:Class ;
+                 rdfs:subClassOf :Шалгалт ;
+                 rdfs:comment "Тухайн хичээлийг судалж дууссаны дараах гол үзүүлэлт."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хавсарга_мэргэжил
+:Хавсарга_мэргэжил rdf:type owl:Class ;
+                   rdfs:subClassOf :Хөтөлбөр ;
+                   rdfs:comment "Тодорхой болзол хангасан оюутанд суралцаж байгаа үндсэн мэргэжлийн зэрэгцээ өөр мэргэжлийн чиглэлээр системтэй мэдлэг эзэмшүүлэх зорилготой хөтөлбөр."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хичээл
+:Хичээл rdf:type owl:Class ;
+        rdfs:comment "Хичээлийн хөтөлбөрт тусгагдсан судлагдахуун."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хичээл_явагдах_хэлбэр
+:Хичээл_явагдах_хэлбэр rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хичээлийн_төрөл
+:Хичээлийн_төрөл rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хичээлийн_уялдаа
+:Хичээлийн_уялдаа rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хичээлийн_хөтөлбөр
+:Хичээлийн_хөтөлбөр rdf:type owl:Class ;
+                    rdfs:comment "Сургалтын төлөвлөгөөнд тусгагдсан хичээл тус бүрийн тухай нарийн тодорхойлсон баримт бичиг."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хос_мэргэжил
+:Хос_мэргэжил rdf:type owl:Class ;
+              rdfs:subClassOf :Хөтөлбөр ;
+              rdfs:comment "Тодорхой болзол хангасан оюутанд суралцаж байгаа үндсэн мэргэжил болон өөр чиглэлээр хоёр дахь мэргэжлийг эзэмшүүлэх зорилготой хөтөлбөр."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хувьчилсан_оноо
+:Хувьчилсан_оноо rdf:type owl:Class ;
+                 rdfs:subClassOf :Үнэлгээ ;
+                 rdfs:comment "100% гэж үзэж гүйцэтгэлийг нь түүнтэй харьцуулж үнэлсэн тоо."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хүн
+:Хүн rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Хөтөлбөр
+:Хөтөлбөр rdf:type owl:Class ;
+          rdfs:comment "Хоорондоо уялдаа холбоотой бүрэлдэхүүн хэсгүүдээс бүрдсэн тодорхой шатны боловсролын зэрэг олгоход нийцүүлсэн суралцагчийн суралцах хөтөлбөр."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Шалгалт
+:Шалгалт rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Элсэлтийн_ерөнхий_шалгалт
+:Элсэлтийн_ерөнхий_шалгалт rdf:type owl:Class ;
+                           rdfs:subClassOf :Элсэлтийн_шалгалт ;
+                           rdfs:comment "Бакалаврын түвшинд элсэхийг хүсэгчдийн мэдлэг чадварыг сорих шалгалт."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Элсэлтийн_мэргэжлийн_шалгалт
+:Элсэлтийн_мэргэжлийн_шалгалт rdf:type owl:Class ;
+                              rdfs:subClassOf :Элсэлтийн_шалгалт ;
+                              rdfs:comment "Магистр, докторын хөтөлбөрт элсэхийг хүсэгчдийн мэдлэг, чадварыг тодорхойлох зорилготой шалгалт."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Элсэлтийн_шалгалт
+:Элсэлтийн_шалгалт rdf:type owl:Class ;
+                   rdfs:subClassOf :Шалгалт .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Үндсэн_мэргэжил
+:Үндсэн_мэргэжил rdf:type owl:Class ;
+                 rdfs:subClassOf :Хөтөлбөр ;
+                 rdfs:comment "Оюутны суралцах үндсэн чиглэл буюу тухайн шинжлэх ухааны тодорхой мэдлэг, чадвар, дадлыг заавал болон сонгон суралцах хэлбэрээр бакалаврын зэрэг олгох түвшинд эзэмшүүлэх зорилготой хөтөлбөр."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Үнэлгээ
+:Үнэлгээ rdf:type owl:Class ;
+         rdfs:comment "Суралцагчийн хичээлийн агуулгыг эзэмшсэн байдлыг илтгэх үзүүлэлт."@mn .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Үсгээр_илтгэсэн_дүн
+:Үсгээр_илтгэсэн_дүн rdf:type owl:Class ;
+                     rdfs:subClassOf :Үнэлгээ ;
+                     rdfs:comment "Тоон дүнд харгалзах үсгэн дүн. (A, A-, B, B-, C, C-, D, D-, F)"@mn .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#_төлөвлөгөө
+:_төлөвлөгөө rdf:type owl:NamedIndividual ,
+                      :Сургалтын_төлөвлөгөө ;
+             :жагсаалттай :Мэдээллийн_технологи .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Батаа_оюутан
+:Батаа_оюутан rdf:type owl:NamedIndividual ,
+                       :Оюутан ;
+              :суралцах :Мэдээллийн_технологи .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Болд_багш
+:Болд_багш rdf:type owl:NamedIndividual ,
+                    :Багш ;
+           :заах :Мэдээллийн_технологи ;
+           :үнэлэх :Мэдээллийн_технологи .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Инженерийн_математик
+:Инженерийн_математик rdf:type owl:NamedIndividual ,
+                               :Ерөнхий_суурь_хичээл .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#МУИС_сургалтын_нэгдсэн_алба
+:МУИС_сургалтын_нэгдсэн_алба rdf:type owl:NamedIndividual ,
+                                      :Сургалтын_нэгдсэн_алба ;
+                             :удирдах :ХШУИС_сургалтын_алба .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Монгол_Улсын_Их_Сургууль
+:Монгол_Улсын_Их_Сургууль rdf:type owl:NamedIndividual ,
+                                   :МУИС ;
+                          :олгох :Мэдээллийн_технологийн_инженер_бакалаврын_зэрэг .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Мэдээллийн_технологи
+:Мэдээллийн_технологи rdf:type owl:NamedIndividual ,
+                               :Бакалаврын_сургалт ;
+                      :зохион_байгуулах :өгөгдлийн_бүтцийн_хаврын_шалгалт ;
+                      :хамрагдах :Мэдээллийн_технологи .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Мэдээллийн_технологийн_ангийн_хичээлийн_хөтөлбөр
+:Мэдээллийн_технологийн_ангийн_хичээлийн_хөтөлбөр rdf:type owl:NamedIndividual ,
+                                                           :Хичээлийн_хөтөлбөр ;
+                                                  :тэй :_төлөвлөгөө .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Мэдээллийн_технологийн_инженер_бакалаврын_зэрэг
+:Мэдээллийн_технологийн_инженер_бакалаврын_зэрэг rdf:type owl:NamedIndividual ,
+                                                          :Бакалаврын_зэрэг ;
+                                                 :судалгааны_ажилтай :Түлшний_хяналтын_систем .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Мэдээллийн_технологийн_инженер_мэргэжлийн_хөтөлбөр
+:Мэдээллийн_технологийн_инженер_мэргэжлийн_хөтөлбөр rdf:type owl:NamedIndividual ,
+                                                             :Үндсэн_мэргэжил ;
+                                                    :төлөвлөгөөтэй :_төлөвлөгөө .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Түлшний_хяналтын_систем
+:Түлшний_хяналтын_систем rdf:type owl:NamedIndividual ,
+                                  :Бакалаврын_ажил .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#ХШУИС_сургалтын_алба
+:ХШУИС_сургалтын_алба rdf:type owl:NamedIndividual ,
+                               :Сургалтын_алба .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Өгөгдлийн_бүтэц
+:Өгөгдлийн_бүтэц rdf:type owl:NamedIndividual ,
+                          :Мэргэжлийн_хичээл .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#өгөгдлийн_бүтцийн_хаврын_шалгалт
+:өгөгдлийн_бүтцийн_хаврын_шалгалт rdf:type owl:NamedIndividual ,
+                                           :Улирлын_шалгалт .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
