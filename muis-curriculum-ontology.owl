@@ -512,12 +512,6 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#_төлөвлөгөө
-:_төлөвлөгөө rdf:type owl:NamedIndividual ,
-                      :Сургалтын_төлөвлөгөө ;
-             :жагсаалттай :Мэдээллийн_технологи .
-
-
 ###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Батаа_оюутан
 :Батаа_оюутан rdf:type owl:NamedIndividual ,
                        :Оюутан ;
@@ -558,7 +552,7 @@
 ###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Мэдээллийн_технологийн_ангийн_хичээлийн_хөтөлбөр
 :Мэдээллийн_технологийн_ангийн_хичээлийн_хөтөлбөр rdf:type owl:NamedIndividual ,
                                                            :Хичээлийн_хөтөлбөр ;
-                                                  :тэй :_төлөвлөгөө .
+                                                  :тэй :мт_анги_сургалтын_төлөвлөгөө .
 
 
 ###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Мэдээллийн_технологийн_инженер_бакалаврын_зэрэг
@@ -570,7 +564,7 @@
 ###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Мэдээллийн_технологийн_инженер_мэргэжлийн_хөтөлбөр
 :Мэдээллийн_технологийн_инженер_мэргэжлийн_хөтөлбөр rdf:type owl:NamedIndividual ,
                                                              :Үндсэн_мэргэжил ;
-                                                    :төлөвлөгөөтэй :_төлөвлөгөө .
+                                                    :төлөвлөгөөтэй :мт_анги_сургалтын_төлөвлөгөө .
 
 
 ###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Түлшний_хяналтын_систем
@@ -581,6 +575,12 @@
 ###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#ХШУИС_сургалтын_алба
 :ХШУИС_сургалтын_алба rdf:type owl:NamedIndividual ,
                                :Сургалтын_алба .
+
+
+###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#мт_анги_сургалтын_төлөвлөгөө
+:мт_анги_сургалтын_төлөвлөгөө rdf:type owl:NamedIndividual ,
+                                       :Сургалтын_төлөвлөгөө ;
+                              :жагсаалттай :Мэдээллийн_технологи .
 
 
 ###  http://www.semanticweb.org/enhush/ontologies/2018/5/muis-curriculum#Өгөгдлийн_бүтэц
