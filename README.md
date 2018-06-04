@@ -1,7 +1,5 @@
 <p align="center">
-	<a href="https://vuejs.org" target="_blank" rel="noopener noreferrer">
-		<img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo">
-	</a>
+	<img width="100" src="muis-curriculum-ontology.svg" alt="МУИС сургалтын онтологи">
 </p>
 
 # МУИС сургалтын айн онтологи
@@ -15,7 +13,7 @@
 мэдээллийг хайж илрүүлэх семантик аппликейшн хөгжүүлэх бүрэн боломжтой.
 
 ## Дэлгэрэнгүй
-Уг ажлын тайлан өгүүллийг сонирхохыг хүсвэл [энд] дарна уу!.
+Уг ажлын тайлан өгүүллийг сонирхохыг хүсвэл [энд](https://github.com/enhush/muis-curriculum-ontology/blob/master/paper/main.pdf) дарна уу!.
 
 ## Лиценз
 [MIT](http://opensource.org/licenses/MIT)
