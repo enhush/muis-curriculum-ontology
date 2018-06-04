@@ -1,5 +1,5 @@
 <p align="center">
-	<img height="100%" src="./muis-curriculum-ontology.svg" alt="МУИС сургалтын онтологи">
+	<img width="100%" src="./muis-curriculum-ontology.svg" alt="МУИС сургалтын онтологи">
 </p>
 
 # МУИС сургалтын айн онтологи
