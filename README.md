@@ -16,4 +16,4 @@
 Уг ажлын тайлан өгүүллийг сонирхохыг хүсвэл [энд](https://github.com/enhush/muis-curriculum-ontology/blob/master/paper/main.pdf) дарна уу!
 
 ## Лиценз
-[MIT](http://opensource.org/licenses/MIT)
+Эдгээр нь [MIT](http://opensource.org/licenses/MIT) эрхтэйгээр тавигдсан тул сонирхсон хэн бүхэнд өөрсдийн судалгаандаа авч ашиглах, нэмж хөгжүүлэхэд бүрэн нээлттэй.
